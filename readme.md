@@ -1,11 +1,12 @@
 ### Identitas Pemilik Tugas:
 
-**Nama**: Eko Muchamad Haryono  
-**NIM**: 0110223079
-**Kelas**: TI-02
-**Semester**: 2
-**Mata kuliah**: Pemrograman Web 2
-**Nama Dosen**: Dr. Sirojul Munir, S.Si., M.Kom
+- **Nama**: Eko Muchamad Haryono  
+- **NIM**: 0110223079
+- **Kelas**: TI-02
+- **Semester**: 2
+- **Mata kuliah**: Pemrograman Web 2
+- **Nama Dosen**: Dr. Sirojul Munir, S.Si., M.Kom
+
 
 
 ##  Github Repo PenWeb 2 - Tugas & Praktikum
