@@ -1,3 +1,8 @@
+<!-- Tugas Punya : Eko Muchamad Haryono -->
+<!-- TI - 02 -->
+<!-- Teknik Informatika -->
+<!-- Pemograman Web 2 (PW2) -->
+
 <?php
 
 // Deklarasi array multidimensi mahasiswa
@@ -16,3 +21,8 @@ foreach ($mahasiswa as $mhs) {
 }
 
 ?>
+
+<!-- Tugas Punya : Eko Muchamad Haryono -->
+<!-- TI - 02 -->
+<!-- Teknik Informatika -->
+<!-- Pemograman Web 2 (PW2) -->

@@ -1,3 +1,8 @@
+<!-- Tugas Punya : Eko Muchamad Haryono -->
+<!-- TI - 02 -->
+<!-- Teknik Informatika -->
+<!-- Pemograman Web 2 (PW2) -->
+
 <?php 
 
 	// Deklarasi array
@@ -35,3 +40,8 @@
 	</ul>
 </body>
 </html>
+
+<!-- Tugas Punya : Eko Muchamad Haryono -->
+<!-- TI - 02 -->
+<!-- Teknik Informatika -->
+<!-- Pemograman Web 2 (PW2) -->

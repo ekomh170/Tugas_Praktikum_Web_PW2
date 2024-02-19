@@ -1,3 +1,8 @@
+<!-- Tugas Punya : Eko Muchamad Haryono -->
+<!-- TI - 02 -->
+<!-- Teknik Informatika -->
+<!-- Pemograman Web 2 (PW2) -->
+
 <?php 
 
     // Deklarasi array associative mahasiswa
@@ -59,3 +64,8 @@
     </table>
 </body>
 </html>
+
+<!-- Tugas Punya : Eko Muchamad Haryono -->
+<!-- TI - 02 -->
+<!-- Teknik Informatika -->
+<!-- Pemograman Web 2 (PW2) -->

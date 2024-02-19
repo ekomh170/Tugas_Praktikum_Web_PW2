@@ -1,3 +1,8 @@
+<!-- Tugas Punya : Eko Muchamad Haryono -->
+<!-- TI - 02 -->
+<!-- Teknik Informatika -->
+<!-- Pemograman Web 2 (PW2) -->
+
 <?php
 
 // Mendeklarasikan variabel
@@ -26,3 +31,8 @@ $statusLulus = $sudahLulus ? "Ya" : "Belum";
     <p>Apakah Sudah Lulus : <?= $statusLulus ?></p>
 </body>
 </html>
+
+<!-- Tugas Punya : Eko Muchamad Haryono -->
+<!-- TI - 02 -->
+<!-- Teknik Informatika -->
+<!-- Pemograman Web 2 (PW2) -->
