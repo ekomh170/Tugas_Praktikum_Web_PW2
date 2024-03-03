@@ -17,7 +17,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-				<form method="POST" action="nilai_mahasiswa.php">
+				<form method="POST" action="proses_nilai.php">
 					<h1>Form Nilai Siswa</h1>
 					<hr>
 					<div class="form-group row">
