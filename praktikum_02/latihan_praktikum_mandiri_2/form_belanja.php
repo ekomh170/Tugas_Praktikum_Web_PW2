@@ -100,7 +100,7 @@
                 <div class="card kombinasi-container">
                     <h3 class="card-title text-center">Form Belanja Online</h3>
                     <hr />
-                    <form action="" method="post">
+                    <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
                         <div class="form-group row">
                             <label for="customer" class="col-md-4 col-form-labe fw-bold">Customer :</label>
                             <div class="col-md-8">
@@ -176,16 +176,19 @@
                         <h3 class="card-title text-center">Detail Pembelian</h3>
                         <hr />
                         <div>
-                            <p><strong>Nama Customer:</strong> ' . $customer . '</p>
-                            <p><strong>Produk Pilihan:</strong> ' . $produk . '</p>
-                            <p><strong>Jumlah Beli:</strong> ' . $jumlah . '</p>
-                            <p><strong>Total Belanja:</strong> ';
+                            <p><strong>Nama Customer :</strong>' . $customer . '</p>
+                            <p><strong>Produk Pilihan : </strong>' . $produk . '</p>
+                            <p><strong>Jumlah Beli : </strong>' . $jumlah . '</p>
+                            <p><strong>Total Belanja : </strong> Rp. ';
             if ($produk == "TV") {
-                echo "Rp. 2.000.000";
+                $tv = 2000000;
+                echo $tv * $jumlah;
             } elseif ($produk == "Kulkas") {
-                echo "Rp. 3.500.000";
+                $kulkas = 3500000;
+                $kulkas * $jumlah;
             } elseif ($produk == "Mesin Cuci") {
-                echo "Rp. 2.800.000";
+                $mesin_cuci = 2800000;
+                echo  $mesin_cuci * $jumlah;
             }
 
             echo '</p>
