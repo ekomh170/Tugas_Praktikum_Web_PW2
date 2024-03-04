@@ -163,12 +163,12 @@
         </div>
         <!-- Detail Pembelian -->
         <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $customer = $_POST["customer"];
-            $produk = $_POST["produk"];
-            $jumlah = $_POST["jumlah"];
-
-            echo '
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $customer = $_POST["customer"];
+        $produk = $_POST["produk"];
+        $jumlah = $_POST["jumlah"];
+    
+        echo '
         <div id="detailPembelianPrint">
             <div class="row detail-pembelian">
                 <div class="col-md-12">
@@ -180,27 +180,34 @@
                             <p><strong>Produk Pilihan : </strong>' . $produk . '</p>
                             <p><strong>Jumlah Beli : </strong>' . $jumlah . '</p>
                             <p><strong>Total Belanja : </strong> Rp. ';
-            if ($produk == "TV") {
-                $tv = 2000000;
-                echo $tv * $jumlah;
-            } elseif ($produk == "Kulkas") {
-                $kulkas = 3500000;
-                $kulkas * $jumlah;
-            } elseif ($produk == "Mesin Cuci") {
-                $mesin_cuci = 2800000;
-                echo  $mesin_cuci * $jumlah;
-            }
-
-            echo '</p>
-            
+    
+        // Hitung total belanja
+        $total_belanja = 0;
+        if ($produk == "TV") {
+            $harga_produk = 2000000;
+            $total_belanja = $harga_produk * $jumlah;
+        } elseif ($produk == "Kulkas") {
+            $harga_produk = 3500000;
+            $total_belanja = $harga_produk * $jumlah;
+        } elseif ($produk == "Mesin Cuci") {
+            $harga_produk = 2800000;
+            $total_belanja = $harga_produk * $jumlah;
+        }
+    
+        // Format total belanja menjadi format mata uang Rupiah
+        $total_belanja_rp = number_format($total_belanja, 0, ',', '.');
+    
+        echo $total_belanja_rp . '</p>
+                        
                         </div>
                         <button id="cetakBtn" class="btn btn-primary btn-block mt-3">Cetak Detail Pembelian</button>
-
+    
                     </div>
                 </div>
             </div>
         </div>';
-        }
+    }
+    
         ?>
     </div>
     <script>
