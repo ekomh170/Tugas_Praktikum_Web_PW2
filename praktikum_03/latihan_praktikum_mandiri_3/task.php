@@ -34,10 +34,15 @@ LOOPING KEDUA
 
 echo "Output: <br> <br>LOOPING PERTAMA: <br>";
 // Lakukan Looping Pertama Di Sini
+for ($i = 2; $i <= 20; $i += 2) {
+    echo "$i - I Love PHP <br>";
+}
 
 echo "<br>LOOPING KEDUA: <br>";
 // Lakukan Looping Kedua Di Sini
-
+for ($i = 20; $i >= 2; $i -= 2) {
+    echo "$i - I Love PHP <br>";
+}
 
 echo "<h3>Soal No 2 Function Tentukan Nilai</h3>";
 /*
@@ -49,11 +54,22 @@ sama dengan 60 dan lebih kecil dari 70 maka akan mereturn string “Cukup” sel
 */
 
 // Code function di sini
+function tentukan_nilai($nilai) {
+    if ($nilai >= 85 && $nilai <= 100) {
+        return "Sangat Baik";
+    } elseif ($nilai >= 70 && $nilai < 85) {
+        return "Baik";
+    } elseif ($nilai >= 60 && $nilai < 70) {
+        return "Cukup";
+    } else {
+        return "Kurang";
+    }
+}
 
 // Hapus komentar di bawah ini untuk jalankan code
-// echo tentukan_nilai(98); //Sangat Baik
-// echo tentukan_nilai(76); //Baik
-// echo tentukan_nilai(67); //Cukup
-// echo tentukan_nilai(43); //Kurang
+echo tentukan_nilai(98) . "<br>"; //Sangat Baik
+echo tentukan_nilai(76) . "<br>"; //Baik
+echo tentukan_nilai(67) . "<br>"; //Cukup
+echo tentukan_nilai(43) . "<br>"; //Kurang
 
 ?>
