@@ -17,4 +17,6 @@ Repository ini dibuat untuk menyimpan kumpulan tugas dan praktikum yang berkaita
 
 1. [Tugas 1: Praktikum 01 - Mempelajari dan melakukan implementasi PHP](https://github.com/ekomh170/Tugas_Praktikum_Web_PW2/tree/master/praktikum_01)
 
-1. [Tugas 2: Praktikum 02 - Praktikum Mandiri Form Request POST](https://github.com/ekomh170/Tugas_Praktikum_Web_PW2/tree/master/praktikum_02/latihan_praktikum_mandiri_2)
+2. [Tugas 2: Praktikum 02 - Praktikum Mandiri Form Request POST](https://github.com/ekomh170/Tugas_Praktikum_Web_PW2/tree/master/praktikum_02/latihan_praktikum_mandiri_2)
+
+3. [Tugas 3: Praktikum 03](https://github.com/ekomh170/Tugas_Praktikum_Web_PW2/tree/master/praktikum_03)
