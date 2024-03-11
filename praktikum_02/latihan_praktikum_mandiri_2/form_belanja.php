@@ -198,7 +198,7 @@
         $total_belanja_rp = number_format($total_belanja, 0, ',', '.');
     
         echo $total_belanja_rp . '</p>
-                        
+                          <p><strong>Harga Satuan Barang : </strong>' . number_format($harga_produk, 0, ',', '.') . '</p>
                         </div>
                         <button id="cetakBtn" class="btn btn-primary btn-block mt-3">Cetak Detail Pembelian</button>
     
