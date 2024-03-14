@@ -66,27 +66,27 @@
                 <label class="col-4">Keahlian</label>
                 <div class="col-8">
                     <div class="custom-control custom-checkbox custom-control-inline">
-                        <input name="keahlian" id="keahlian_0" type="checkbox" class="custom-control-input" value="HTML" required="required">
+                        <input name="keahlian[]" id="keahlian_0" type="checkbox" class="custom-control-input" value="HTML">
                         <label for="keahlian_0" class="custom-control-label">HTML</label>
                     </div>
                     <div class="custom-control custom-checkbox custom-control-inline">
-                        <input name="keahlian" id="keahlian_1" type="checkbox" class="custom-control-input" value="CSS" required="required">
+                        <input name="keahlian[]" id="keahlian_1" type="checkbox" class="custom-control-input" value="CSS">
                         <label for="keahlian_1" class="custom-control-label">CSS</label>
                     </div>
                     <div class="custom-control custom-checkbox custom-control-inline">
-                        <input name="keahlian" id="keahlian_2" type="checkbox" class="custom-control-input" value="Javascript" required="required">
+                        <input name="keahlian[]" id="keahlian_2" type="checkbox" class="custom-control-input" value="Javascript">
                         <label for="keahlian_2" class="custom-control-label">Javascript</label>
                     </div>
                     <div class="custom-control custom-checkbox custom-control-inline">
-                        <input name="keahlian" id="keahlian_3" type="checkbox" required="required" class="custom-control-input" value="Python">
+                        <input name="keahlian[]" id="keahlian_3" type="checkbox" class="custom-control-input" value="Python">
                         <label for="keahlian_3" class="custom-control-label">Python</label>
                     </div>
                     <div class="custom-control custom-checkbox custom-control-inline">
-                        <input name="keahlian" id="keahlian_4" type="checkbox" required="required" class="custom-control-input" value="RWD Bootstrap">
+                        <input name="keahlian[]" id="keahlian_4" type="checkbox" class="custom-control-input" value="RWD Bootstrap">
                         <label for="keahlian_4" class="custom-control-label">RWD Bootstrap</label>
                     </div>
                     <div class="custom-control custom-checkbox custom-control-inline">
-                        <input name="keahlian" id="keahlian_5" type="checkbox" required="required" class="custom-control-input" value="Lainnya">
+                        <input name="keahlian[]" id="keahlian_5" type="checkbox" class="custom-control-input" value="Lainnya">
                         <label for="keahlian_5" class="custom-control-label">Lainnya</label>
                     </div>
                 </div>
