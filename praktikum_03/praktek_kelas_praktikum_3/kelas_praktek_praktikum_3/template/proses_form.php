@@ -7,7 +7,15 @@ $jenis_kelamin = $_POST['jenis_kelamin'];
 $program_studi = $_POST['program_studi'];
 
 // Array Keahlian HTML CSS JAVASCRIPT PYTHON RWD BOOTSTRAP LAINNYA
-$keahlianArray = ["HTML", "CSS", "JAVASCRIPT", "PYTHON", "RWD", "BOOTSTRAP", "LAINNYA"];
+$keahlianArray = array(
+    array("nama" => "HTML", "poin" => 10),
+    array("nama" => "CSS", "poin" => 8),
+    array("nama" => "JAVASCRIPT", "poin" => 9),
+    array("nama" => "PYTHON", "poin" => 7),
+    array("nama" => "RWD", "poin" => 8),
+    array("nama" => "BOOTSTRAP", "poin" => 7),
+    array("nama" => "LAINNYA", "poin" => 6)
+);
 
 // Memastikan bahwa $_POST['keahlian'] merupakan sebuah array
 $keahlian = isset($_POST['keahlian']) ? $_POST['keahlian'] : [];
@@ -26,17 +34,29 @@ $email = $_POST['email'];
 <h5>Keahlian :
     <?php $counter = count($keahlian); // Hitung jumlah keahlian yang dipilih ?>
     <?php foreach ($keahlianArray as $index => $keahlianItem) : ?>
-        <?php if (in_array($keahlianItem, $keahlian)) : ?>
-            <?= $keahlianItem; ?>
-            <?php // Tambahkan koma jika tidak mencapai keahlian terakhir ?>
-            <?php if ($index < $counter - 1) : ?> 
-                <?php echo ", "; ?>
+        <?php foreach ($keahlian as $selectedKeahlian) : ?>
+            <?php if ($keahlianItem['nama'] == $selectedKeahlian) : ?>
+                <?= $keahlianItem['nama']; ?>
+                <?php // Tambahkan koma jika tidak mencapai keahlian terakhir ?>
+                <?php if ($index < $counter - 1) : ?> 
+                    <?php echo ", "; ?>
+                <?php endif; ?>
             <?php endif; ?>
-        <?php endif; ?>
+        <?php endforeach; ?>
     <?php endforeach; ?>
 </h5>
 
-
+<h5>Point Keahlian : 
+    <?php $totalPoin = 0; ?>
+    <?php foreach ($keahlianArray as $keahlianItem) : ?>
+        <?php foreach ($keahlian as $selectedKeahlian) : ?>
+            <?php if ($keahlianItem['nama'] == $selectedKeahlian) : ?>
+                <?php $totalPoin += $keahlianItem['poin']; ?>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    <?php endforeach; ?>
+    <?= $totalPoin; ?>
+</h5>
 
 <h5>Domisili : <?= $domisili; ?></h5>
 <h5>Email : <?= $email; ?></h5>
