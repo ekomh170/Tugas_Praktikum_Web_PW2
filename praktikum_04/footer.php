@@ -23,6 +23,8 @@
 <script src="dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+<!-- My Assets -->
+<script src="dist/js/myjs.js"></script>
 </body>
 
 </html>

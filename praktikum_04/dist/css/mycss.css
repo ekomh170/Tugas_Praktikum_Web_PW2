@@ -1,0 +1,67 @@
+body {
+    padding-top: 20px;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.harga-table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.harga-table th,
+.harga-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.harga-table th {
+    background-color: #f2f2f2;
+}
+
+.kombinasi-container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #007bff;
+}
+
+hr {
+    border-top: 2px solid #007bff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.detail-pembelian {
+    margin-top: 20px;
+}
+
+.detail-pembelian .card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.detail-pembelian p {
+    margin-bottom: 5px;
+}

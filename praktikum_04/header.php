@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="dist/css/mycss.css">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
