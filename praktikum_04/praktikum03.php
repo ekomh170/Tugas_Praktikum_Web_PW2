@@ -2,6 +2,9 @@
 require_once 'header.php';
 require_once 'sidebar.php';
 
+// Validasi Seluruh Data Pendaftar Berdasarkan NIM
+$validasiPendaftar = isset($_POST['nim']) && !empty($_POST['nim']);
+
 // POST nim,  nama, jenis kelamin, program studi, keahlian, domisili, email
 @$nim = $_POST['nim'];
 @$nama = $_POST['nama'];
@@ -61,7 +64,7 @@ $keahlian = isset($_POST['keahlian']) ? $_POST['keahlian'] : [];
                       <div class="input-group">
                         <div class="input-group-prepend">
                           <div class="input-group-text">
-                            <i class="fa fa-adn"></i>
+                            <i class="fa fa-tag"></i>
                           </div>
                         </div>
                         <input id="nim" name="nim" placeholder="Masukan Nomor Induk Mahasiswa" type="text" class="form-control">
@@ -162,6 +165,7 @@ $keahlian = isset($_POST['keahlian']) ? $_POST['keahlian'] : [];
                   <div class="form-group row">
                     <div class="offset-4 col-8">
                       <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+                      <button type="reset" class="btn btn-danger">Reset</button>
                     </div>
                   </div>
                 </form>
@@ -169,7 +173,11 @@ $keahlian = isset($_POST['keahlian']) ? $_POST['keahlian'] : [];
               <div class="container mt-5">
                 <div class="card col-8 mx-auto">
                   <div class="card-body">
-                    <h2 class="card-text text-center mb-3">Terima Kasih Sudah Mendaftar di IT Club Data Science</h2>
+                    <?php if ($validasiPendaftar) : ?>
+                      <h2 class="card-text text-center mb-3">Terima Kasih Sudah Mendaftar di IT Club Data Science</h2>
+                    <?php else : ?>
+                      <h2 class="card-text text-center mb-3">Ayo Mendaftar di IT Club Data Science</h2>
+                    <?php endif; ?>
                     <hr />
                     <div style="font-size:larger;">
                       <div class="card-text"><strong>Nama Lengkap :</strong> <?= $nama; ?></div>

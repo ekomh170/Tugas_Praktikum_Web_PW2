@@ -45,7 +45,7 @@ require_once 'sidebar.php';
                           </div>
                         </div>
                         <div class="form-group">
-                          <label style="margin-right: 20%;" class="fw-bold">Pilih Produk : </label>
+                          <label style="margin-right: 15%;" class="fw-bold">Pilih Produk : </label>
                           <input type="radio" id="tv" name="produk" value="TV" required>
                           <label for="tv">TV</label>
                           <input type="radio" id="kulkas" name="produk" value="Kulkas" required>
@@ -60,6 +60,7 @@ require_once 'sidebar.php';
                           </div>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">Kirim</button>
+                        <button type="reset" class="btn btn-danger btn-block">Reset</button>
                       </form>
                     </div>
                   </div>
