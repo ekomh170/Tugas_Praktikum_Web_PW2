@@ -3,10 +3,10 @@ require_once 'header.php';
 require_once 'sidebar.php';
 
 // POST nim,  nama, jenis kelamin, program studi, keahlian, domisili, email
-$nim = $_POST['nim'];
-$nama = $_POST['nama'];
-$jenis_kelamin = $_POST['jenis_kelamin'];
-$program_studi = $_POST['program_studi'];
+@$nim = $_POST['nim'];
+@$nama = $_POST['nama'];
+@$jenis_kelamin = $_POST['jenis_kelamin'];
+@$program_studi = $_POST['program_studi'];
 
 // Array Keahlian HTML CSS JAVASCRIPT PYTHON RWD BOOTSTRAP LAINNYA
 $keahlianArray = array(
@@ -22,8 +22,8 @@ $keahlianArray = array(
 // Memastikan bahwa $_POST['keahlian'] merupakan sebuah array
 $keahlian = isset($_POST['keahlian']) ? $_POST['keahlian'] : [];
 
-$domisili = $_POST['domisi'];
-$email = $_POST['email'];
+@$domisili = $_POST['domisi'];
+@$email = $_POST['email'];
 
 ?>
 
@@ -50,8 +50,6 @@ $email = $_POST['email'];
           <div class="card">
             <div class="card-header">
               <h3 class="card-title">Praktikum 3 Website - Eko Muchamad Haryono</h3>
-
-              
             </div>
             <div class="card-body">
               <div class="container">
@@ -168,41 +166,47 @@ $email = $_POST['email'];
                   </div>
                 </form>
               </div>
+              <div class="container mt-5">
+                <div class="card col-8 mx-auto">
+                  <div class="card-body">
+                    <h2 class="card-text text-center mb-3">Terima Kasih Sudah Mendaftar di IT Club Data Science</h2>
+                    <hr />
+                    <div style="font-size:larger;">
+                      <div class="card-text"><strong>Nama Lengkap :</strong> <?= $nama; ?></div>
+                      <div class="card-text"><strong>NIM :</strong> <?= $nim; ?></div>
+                      <div class="card-text"><strong>Jenis Kelamin :</strong> <?= $jenis_kelamin; ?></div>
+                      <div class="card-text"><strong>Program Studi :</strong> <?= $program_studi; ?></div>
 
-              <h1>Terima Kasih Sudah Mendaftar di IT Club Data Science <br></h1>
-              <h5>Nama Lengkap : <?= $nama; ?></h5>
-              <h5>NIM : <?= $nim; ?></h5>
-              <h5>Jenis Kelamin : <?= $jenis_kelamin; ?></h5>
-              <h5>Program Studi : <?= $program_studi; ?></h5>
+                      <div class="card-text"><strong>Keahlian :</strong>
+                        <?php $counter = count($keahlian); ?>
+                        <?php foreach ($keahlianArray as $index => $keahlianItem) : ?>
+                          <?php foreach ($keahlian as $selectedKeahlian) : ?>
+                            <?php if ($keahlianItem['nama'] == $selectedKeahlian) : ?>
+                              <?= $keahlianItem['nama']; ?>
+                              <?php if ($index < $counter - 1) : ?>
+                                <?php echo ", "; ?>
+                              <?php endif; ?>
+                            <?php endif; ?>
+                          <?php endforeach; ?>
+                        <?php endforeach; ?>
+                      </div>
 
-              <h5>Keahlian :
-                <?php $counter = count($keahlian); // Hitung jumlah keahlian yang dipilih 
-                ?>
-                <?php foreach ($keahlianArray as $index => $keahlianItem) : ?>
-                  <?php foreach ($keahlian as $selectedKeahlian) : ?>
-                    <?php if ($keahlianItem['nama'] == $selectedKeahlian) : ?>
-                      <?= $keahlianItem['nama']; ?>
-                      <?php // Tambahkan koma jika tidak mencapai keahlian terakhir 
-                      ?>
-                      <?php if ($index < $counter - 1) : ?>
-                        <?php echo ", "; ?>
-                      <?php endif; ?>
-                    <?php endif; ?>
-                  <?php endforeach; ?>
-                <?php endforeach; ?>
-              </h5>
+                      <div class="card-text"><strong>Point Keahlian :</strong>
+                        <?php $totalPoin = 0; ?>
+                        <?php foreach ($keahlianArray as $keahlianItem) : ?>
+                          <?php foreach ($keahlian as $selectedKeahlian) : ?>
+                            <?php if ($keahlianItem['nama'] == $selectedKeahlian) : ?>
+                              <?php $totalPoin += $keahlianItem['poin']; ?>
+                            <?php endif; ?>
+                          <?php endforeach; ?>
+                        <?php endforeach; ?>
+                        <?= $totalPoin; ?>
+                      </div>
+                    </div>
 
-              <h5>Point Keahlian :
-                <?php $totalPoin = 0; ?>
-                <?php foreach ($keahlianArray as $keahlianItem) : ?>
-                  <?php foreach ($keahlian as $selectedKeahlian) : ?>
-                    <?php if ($keahlianItem['nama'] == $selectedKeahlian) : ?>
-                      <?php $totalPoin += $keahlianItem['poin']; ?>
-                    <?php endif; ?>
-                  <?php endforeach; ?>
-                <?php endforeach; ?>
-                <?= $totalPoin; ?>
-              </h5>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- /.card-body -->
