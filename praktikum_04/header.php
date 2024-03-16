@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="dist/css/adminlte.min.css">
     <!-- My CSS -->
     <link rel="stylesheet" href="dist/css/mycss.css">
+    <link rel="stylesheet" href="dist/css/mytable.css">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">

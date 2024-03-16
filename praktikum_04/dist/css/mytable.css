@@ -1,0 +1,19 @@
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table thead th {
+    background-color: #343a40;
+    color: #ffffff;
+    border-color: #454d55;
+}
+
+.table tbody tr:nth-of-type(even) {
+    background-color: #f8f9fa;
+}
+
+.table tbody tr:hover {
+    background-color: #e9ecef;
+}
