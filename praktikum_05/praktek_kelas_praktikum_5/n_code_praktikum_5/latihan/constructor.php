@@ -15,11 +15,11 @@ class Mahasiswa
 }
 
 // Membuat objek dari class Mahasiswa
-$mahasiswa1 = new Mahasiswa("Abdurrahman Ziyad", "Depok", "Teknik Informatika");
+$data_mhs = new Mahasiswa("Eko Muchamad Haryono", "Kab. Bogor", "Teknik Informatika");
 
 // Tampilin Data class Mahasiswa
-echo "Nama Mahasiswa: " . $mahasiswa1->nama . "<br>";
-echo "Alamat Mahasiswa: " . $mahasiswa1->alamat . "<br>";
-echo "Jurusan Mahasiswa: " . $mahasiswa1->jurusan . "<br>";
+echo "Nama Mahasiswa: " . $data_mhs->nama . "<br>";
+echo "Alamat Mahasiswa: " . $data_mhs->alamat . "<br>";
+echo "Jurusan Mahasiswa: " . $data_mhs->jurusan . "<br>";
 
 ?>
