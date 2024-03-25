@@ -24,3 +24,7 @@ Repository ini dibuat untuk menyimpan kumpulan tugas dan praktikum yang berkaita
 4. [Tugas 4: Praktikum 04 - Melakukan Intergrasi Templating Pada PHP](https://github.com/ekomh170/Tugas_Praktikum_Web_PW2/tree/master/praktikum_04)
 
 5. [Tugas 5: Praktikum 05 - Membuat Form Nilai Ujian - OOP PHP](https://github.com/ekomh170/Tugas_Praktikum_Web_PW2/tree/master/praktikum_05/latihan_praktek_praktikum_5)
+
+6. [Tugas 6: Praktikum 06 - Belajar Database MySQL & PHP Data Object](https://github.com/ekomh170/Tugas_Praktikum_Web_PW2/tree/master/praktikum_06)
+
+7. [Tugas 7: Praktikum 07 - Comming Soon](#)
