@@ -1,4 +1,5 @@
 <?php
+
 // Memanggil file koneksi database
 require 'dbkoneksi.php';
 
@@ -56,8 +57,8 @@ function redirectWithAlert($url, $message) {
 }
 
 // Memeriksa apakah ada request untuk menambahkan data
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["tambah"])) {
-    // Menangkap data dari form
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"]) && $_POST["action"] == "tambah") {
+// Menangkap data dari form
     $_kode = $_POST['kode'];
     $_nama = $_POST['nama'];
     $_tmp_lahir = $_POST['tmp_lahir'];
@@ -90,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["hapus"])) {
 }
 
 // Memeriksa apakah ada request untuk mengedit data
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["edit"])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"]) && $_POST["action"] == "edit") {
     // Menangkap data dari form
     $_id = $_POST['id'];
     $_kode = $_POST['kode'];
