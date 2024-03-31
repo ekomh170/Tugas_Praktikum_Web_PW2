@@ -47,7 +47,7 @@ if ($_id) {
 
 <body>
     <div class="container mt-5">
-        <h2 class="text-center">Form Pasien</h2>
+        <h2 class="text-center mb-4">Pengisian Form Pasien Puskesmas</h2>
         <form action="proses_pasien.php" method="POST">
             <!-- Input tersembunyi untuk menandai aksi -->
             <input type="hidden" name="action" value="<?= $pasien ? 'edit' : 'tambah' ?>">
@@ -113,6 +113,13 @@ if ($_id) {
             </div>
         </form>
     </div>
+
+    <footer class="footer mt-5 py-3 bg-light text-center">
+        <div class="container">
+            <span class="text-dark">Copyright &copy; 2024 Eko Muchamad Haryono</span>
+        </div>
+    </footer>
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 

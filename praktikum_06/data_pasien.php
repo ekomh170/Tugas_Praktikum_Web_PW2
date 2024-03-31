@@ -51,7 +51,7 @@ function showAlert($message)
 <body>
     <div class="container mt-5">
         <div class="card">
-            <h2 class="card-header text-center">Data Pasien</h2>
+            <h2 class="card-header text-center">Data Pasien Puskesmas</h2>
             <div class="card-body">
                 <div class="row justify-content-center mb-3">
                     <div class="col-md-4">
@@ -117,7 +117,7 @@ function showAlert($message)
 
     <footer class="footer mt-5 py-3 bg-light text-center">
         <div class="container">
-            <span class="text-muted">Copyright &copy; 2024 Eko Muchamad Haryono</span>
+            <span class="text-dark">Copyright &copy; 2024 Eko Muchamad Haryono</span>
         </div>
     </footer>
 
