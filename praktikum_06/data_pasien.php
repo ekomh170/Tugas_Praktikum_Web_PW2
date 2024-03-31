@@ -1,3 +1,14 @@
+<?php
+// Mendapatkan pesan alert dari URL jika ada
+$alertMessage = isset($_GET['alert']) ? $_GET['alert'] : "";
+
+// Fungsi untuk menampilkan alert
+function showAlert($message)
+{
+    echo "<script>alert('$message');</script>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,13 +34,16 @@
         /* CSS untuk memberikan jarak antara td dan tr */
         table {
             border-collapse: separate;
-            border-spacing: 0 10px; /* Ubah nilai ini untuk menyesuaikan jarak */
-            margin: auto; /* membuat tabel ke tengah */
+            border-spacing: 0 10px;
+            /* Ubah nilai ini untuk menyesuaikan jarak */
+            margin: auto;
+            /* membuat tabel ke tengah */
         }
 
         td,
         th {
-            padding: 10px; /* Ubah nilai ini untuk menyesuaikan jarak */
+            padding: 10px;
+            /* Ubah nilai ini untuk menyesuaikan jarak */
         }
     </style>
 </head>
@@ -82,13 +96,13 @@
                                 echo "<td>" . $row['alamat'] . "</td>";
                                 echo "<td>" . $row['kelurahan_id'] . "</td>";
 
-                                // Tambahkan button name edit & button name hapus tambah kan validasi apakah data ingin di hapus
+                                // Tambahkan link untuk menghapus data dengan metode GET
                                 echo "<td>
                                         <a href='form_pasien.php?id=" . $row['id'] . "'>
                                             <button class='btn btn-warning btn-sm mb-2' name='edit'>Edit</button>
                                         </a>
-                                        <a href='hapus_pasien.php?id=" . $row['id'] . "'>
-                                            <button class='btn btn-danger btn-sm' name='hapus' onclick='return confirm(\"Apakah Anda yakin ingin menghapus data ini?\")'>Hapus</button>
+                                        <a href='proses_pasien.php?hapus=" . $row['id'] . "' onclick='return confirm(\"Apakah Anda yakin ingin menghapus data ini?\")'>
+                                            <button class='btn btn-danger btn-sm'>Hapus</button>
                                         </a>
                                     </td>";
                                 echo "</tr>";
@@ -106,6 +120,14 @@
             <span class="text-muted">Copyright &copy; 2024 Eko Muchamad Haryono</span>
         </div>
     </footer>
+
+    <!-- Tampilkan alert jika ada -->
+    <?php if ($alertMessage != "") : ?>
+        <script>
+            alert("<?php echo htmlspecialchars($alertMessage, ENT_QUOTES); ?>");
+        </script>
+    <?php endif; ?>
+
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
