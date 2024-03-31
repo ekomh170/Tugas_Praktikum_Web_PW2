@@ -124,7 +124,27 @@ function showAlert($message)
     <!-- Tampilkan alert jika ada -->
     <?php if ($alertMessage != "") : ?>
         <script>
+            // Tampilkan alert dari URL
             alert("<?php echo htmlspecialchars($alertMessage, ENT_QUOTES); ?>");
+
+            // Hapus parameter alert dari URL agar tidak ditampilkan kembali setelah refresh
+            window.history.replaceState({}, document.title, window.location.pathname);
+
+            // Fungsi untuk menampilkan pesan sukses atau gagal setelah alert ditutup
+            function showDeleteMessage() {
+                // Ambil parameter dari URL untuk menentukan apakah pesan sukses atau gagal
+                const urlParams = new URLSearchParams(window.location.search);
+                const deleteMessage = urlParams.get('delete_message');
+
+                if (deleteMessage !== null) {
+                    alert(deleteMessage);
+                    // Hapus parameter delete_message dari URL agar tidak ditampilkan kembali setelah refresh
+                    window.history.replaceState({}, document.title, window.location.pathname);
+                }
+            }
+
+            // Panggil fungsi untuk menampilkan pesan
+            showDeleteMessage();
         </script>
     <?php endif; ?>
 
