@@ -13,6 +13,9 @@
 
 Repository ini dibuat untuk menyimpan kumpulan tugas dan praktikum yang berkaitan dengan mata kuliah PenWeb 2 yang diambil pada semester 2. Setiap perubahan atau penambahan yang signifikan akan dicatat dalam commit history.
 
+### Daftar Tugas Utama:
+1. [Project 1: Aplikasi CRUD Sederhana Puskesmas dengan PHP, MySQL, dan AdminLTE](https://github.com/ekomh170/Project-1-PemWeb-2.git)
+
 ### Daftar Tugas:
 
 1. [Tugas 1: Praktikum 01 - Mempelajari dan melakukan implementasi PHP](https://github.com/ekomh170/Tugas_Praktikum_Web_PW2/tree/master/praktikum_01)
@@ -28,3 +31,5 @@ Repository ini dibuat untuk menyimpan kumpulan tugas dan praktikum yang berkaita
 6. [Tugas 6: Praktikum 06 - Belajar Database MySQL & PHP Data Object - Menyelesaikan Tugas Operasi Crud Data Pada Tabel Pasien](https://github.com/ekomh170/Tugas_Praktikum_Web_PW2/tree/master/praktikum_06)
 
 7. [Tugas 7: Praktikum 07 - Comming Soon](#)
+
+8. [Project 1: Aplikasi CRUD Sederhana Puskesmas dengan PHP, MySQL, dan AdminLTE](https://github.com/ekomh170/Project-1-PemWeb-2.git)
