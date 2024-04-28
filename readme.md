@@ -30,6 +30,6 @@ Repository ini dibuat untuk menyimpan kumpulan tugas dan praktikum yang berkaita
 
 6. [Tugas 6: Praktikum 06 - Belajar Database MySQL & PHP Data Object - Menyelesaikan Tugas Operasi Crud Data Pada Tabel Pasien](https://github.com/ekomh170/Tugas_Praktikum_Web_PW2/tree/master/praktikum_06)
 
-7. [Tugas 7: Praktikum 07 - Comming Soon](#)
+7. [Tugas 7: Praktikum 07 - Belajar Intergrasi Login Dengan Sidebar Saat Pertemuan & Praktikum 7](https://github.com/ekomh170/Tugas_Praktikum_Web_PW2/tree/master/praktikum_07)
 
 8. [Project 1: Aplikasi CRUD Sederhana Puskesmas dengan PHP, MySQL, dan AdminLTE](https://github.com/ekomh170/Project-1-PemWeb-2.git)
