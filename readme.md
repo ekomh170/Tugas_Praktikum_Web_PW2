@@ -41,4 +41,4 @@ Repository ini dibuat untuk menyimpan kumpulan tugas dan praktikum yang berkaita
 
 9. [Tugas 9: Praktikum 09 - Instalasi Laravel Belajar Routing & Views](https://github.com/ekomh170/Tugas_Praktikum_Web_PW2/tree/master/praktikum_09)
 
-9. [Tugas 10: Praktikum 10 - Coming Soon](#)
+10. [Tugas 10: Praktikum 10 - Intergrasi Laravel Dengan AdminLTE - Menggunakan Controllers, Routing & Views](https://github.com/ekomh170/Tugas_Praktikum_Web_PW2/tree/master/praktikum_10)
