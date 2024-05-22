@@ -55,9 +55,15 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ url('pegawai') }}" class="nav-link">
+                            <a href="{{ url('admin/pegawai') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Pegawai</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('admin/pasien') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Pasien</p>
                             </a>
                         </li>
                     </ul>

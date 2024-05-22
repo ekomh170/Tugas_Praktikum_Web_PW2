@@ -1,5 +1,5 @@
-@include('layouts.header')
-@include('layouts.sidebar')
+@include('admin.header')
+@include('admin.sidebar')
 
 <div class="container-fluid px-4">
     <!-- Content Wrapper. Contains page content -->
@@ -54,7 +54,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($pasiens as $pasien)
+                            @foreach ($list_pasien as $pasien)
                                 <tr>
                                     <td>{{ $pasien->id }}</td>
                                     <td>{{ $pasien->kode }}</td>
@@ -83,4 +83,4 @@
     <!-- /.content-wrapper -->
 </div>
 
-@include('layouts.footer')
+@include('admin.footer')

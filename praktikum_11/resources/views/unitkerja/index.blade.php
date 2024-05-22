@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <h1 class="my-4">Daftar Pasien</h1>
+                    <h1 class="my-4">Daftar Unit Kerja</h1>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
