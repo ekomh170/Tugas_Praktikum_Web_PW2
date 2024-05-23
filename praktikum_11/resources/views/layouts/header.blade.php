@@ -4,7 +4,20 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {{-- <title>{{ $title }}</title> --}}
+    <title>{{ $title }}</title>
+
+    {{-- Favicon --}}
+    <link rel="icon" href="{{ asset('assets/img/favicon/favicon.ico') }}" type="image/x-icon" />
+    {{-- apple, 16, 32 --}}
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/img/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/img/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/img/favicon/favicon-16x16.png') }}">
+    {{-- site.webmanifest --}}
+    <link rel="manifest" href="{{ asset('assets/img/favicon/site.webmanifest') }}">
+    {{-- Android 192, 512 --}}
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('assets/img/favicon/android-chrome-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ asset('assets/img/favicon/android-chrome-512x512.png') }}">
+    {{-- Safari Pinned Tab --}}
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
