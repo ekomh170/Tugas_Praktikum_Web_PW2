@@ -51,6 +51,6 @@ Route::get('/admin/dokter', [DokterController::class, 'index']);
 
 Route::get('/admin/periksa', [PeriksaController::class, 'index']);
 
-Route::get('/admin/unitkerja', [UnitKerjaController::class, 'index']);
+Route::get('/admin/unit_kerja', [UnitKerjaController::class, 'index']);
 
 Route::get('/admin/kelurahan', [KelurahanController::class, 'index']);
