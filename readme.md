@@ -43,4 +43,4 @@ Repository ini dibuat untuk menyimpan kumpulan tugas dan praktikum yang berkaita
 
 10. [Tugas 10: Praktikum 10 - Intergrasi Laravel Dengan AdminLTE & Admin - MVC & Membuat Halaman Pegawai Dengan MVC](https://github.com/ekomh170/Tugas_Praktikum_Web_PW2/tree/master/praktikum_10)
 
-11. [Tugas 11: Praktikum 11 - Membuat Fitur Periksa, Dokter & Unit Kerja ---- Kelurahan Juga Sudah Di Intergrasikan & Datatabase Juga Sudah Di Relasikan Sesuaikan Dengan Database Puskesmas Sebelumnya](#)
+11. [Tugas 11: Praktikum 11 - Membuat Fitur Periksa, Dokter & Unit Kerja ---- Kelurahan Juga Sudah Di Intergrasikan & Datatabase Juga Sudah Di Relasikan Sesuaikan Dengan Database Puskesmas Sebelumnya](https://github.com/ekomh170/Tugas_Praktikum_Web_PW2/tree/master/praktikum_11)
