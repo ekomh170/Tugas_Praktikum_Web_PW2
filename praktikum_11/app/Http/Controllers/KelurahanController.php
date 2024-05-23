@@ -15,7 +15,8 @@ class KelurahanController extends Controller
         $title = "Daftar Kelurahan";
         $author = "Eko Muchamad Haryono"; 
         $sub = "Kelurahan";
-        $kelurahans = Kelurahan::all();
+        // $kelurahans = Kelurahan::all();
+        $kelurahans = Kelurahan::with('pasien')->get();
         return view('kelurahan.index', compact('kelurahans', 'title', 'author', 'sub'));
         
     }

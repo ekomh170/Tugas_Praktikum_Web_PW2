@@ -15,7 +15,8 @@ class UnitkerjaController extends Controller
         $title = "Halaman Unit Kerja";
         $sub = "Unit Kerja";
         $author = "Eko Muchamad Haryono"; 
-        $unitkerjas = Unitkerja::all();
+        // $unitkerjas = Unitkerja::all();
+        $unitkerjas = Unitkerja::with('dokter')->get();
         return view('unitkerja.index', compact('unitkerjas', 'title', 'author', 'sub'));
     }
 

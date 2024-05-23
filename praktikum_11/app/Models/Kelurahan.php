@@ -14,4 +14,10 @@ class Kelurahan extends Model
     [
         'nama',
     ];
+
+    // hasmany pasien
+    public function pasien()
+    {
+        return $this->hasMany(Pasien::class);
+    }
 }

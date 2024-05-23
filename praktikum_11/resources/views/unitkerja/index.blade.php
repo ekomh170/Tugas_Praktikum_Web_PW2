@@ -45,6 +45,7 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Nama</th>
+                                <th>List Unit Kerja</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -52,6 +53,13 @@
                                 <tr>
                                     <td>{{ $unitkerja->id }}</td>
                                     <td>{{ $unitkerja->nama }}</td>
+                                    <td>
+                                        <ul>
+                                            @foreach ($unitkerja->dokter as $dokterperunitkerja)
+                                                <li>{{ $dokterperunitkerja->nama }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>

@@ -14,4 +14,11 @@ class Unitkerja extends Model
     [
         'nama',
     ];
+
+    // hasmany ke dokter
+    public function dokter()
+    {
+        return $this->hasMany(Dokter::class);
+    }
+    
 }

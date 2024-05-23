@@ -13,7 +13,7 @@
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="{{ url('admin')}}">Admin</a></li>
+                            <li class="breadcrumb-item"><a href="{{ url('admin') }}">Admin</a></li>
                             <li class="breadcrumb-item active">{{ $sub }}</li>
                         </ol>
                     </div>
@@ -45,6 +45,7 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Nama</th>
+                                <th>List Pasien</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -52,6 +53,13 @@
                                 <tr>
                                     <td>{{ $kelurahan->id }}</td>
                                     <td>{{ $kelurahan->nama }}</td>
+                                    <td>
+                                        <ul>
+                                            @foreach ($kelurahan->pasien as $pasienperkelurahan)
+                                                <li>{{ $pasienperkelurahan->nama }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
