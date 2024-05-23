@@ -8,7 +8,8 @@ class PegawaiController extends Controller
 {
     public function index()
     {
-        $title = "Halaman Pegawai -- Eko Muchamad Haryono"; 
-        return view('pegawai.index', \compact('title'));
+        $title = "Halaman Pegawai"; 
+        $author = "Eko Muchamad Haryono"; 
+        return view('pegawai.index', compact('title', 'author'));
     }
 }
