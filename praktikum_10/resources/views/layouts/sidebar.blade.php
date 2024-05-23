@@ -60,6 +60,24 @@
                                 <p>Pegawai</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ url('pasien') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Pasien</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('nilai') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Nilai</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('kabar') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Kabar</p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
             </ul>
