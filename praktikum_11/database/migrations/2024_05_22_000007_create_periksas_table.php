@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('periksas', function (Blueprint $table) {
             // id, tanggal, berat, tinggi, tensi, keterangan, pasien_id, dokter_id
-            $table->bigIncrements('id'); 
+            $table->id();
             $table->date('tanggal');
             $table->decimal('berat', 5, 2);
             $table->decimal('tinggi', 5, 2);
