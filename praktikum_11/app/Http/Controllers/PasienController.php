@@ -12,9 +12,12 @@ class PasienController extends Controller
      */
     public function index()
     {
-        
-        $pasiens = Pasien::all();
-        return view('pasien.index', compact('pasiens'));
+        $title = "Daftar Pasien"; 
+        $author = "Eko Muchamad Haryono"; 
+        $sub = "Pasien";
+        // $pasiens = Pasien::all();
+        $pasiens = Pasien::with('kelurahan')->get();
+        return view('pasien.index', compact('pasiens', 'title', 'author', 'sub'));
 
     }
 

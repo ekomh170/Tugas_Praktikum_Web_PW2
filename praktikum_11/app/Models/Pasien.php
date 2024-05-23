@@ -19,5 +19,11 @@ class Pasien extends Model
         'gender',
         'email',
         'alamat',
+        'kelurahan_id',
     ];  
+
+    public function kelurahan()
+    {
+        return $this->belongsTo(Kelurahan::class);
+    }
 }
