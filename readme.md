@@ -41,6 +41,6 @@ Repository ini dibuat untuk menyimpan kumpulan tugas dan praktikum yang berkaita
 
 9. [Tugas 9: Praktikum 09 - Instalasi Laravel Belajar Routing & Views](https://github.com/ekomh170/Tugas_Praktikum_Web_PW2/tree/master/praktikum_09)
 
-10. [Tugas 10: Praktikum 10 - Intergrasi Laravel Dengan AdminLTE - Bikin versi Pegawai mulai dari Controller, Route dan Views](https://github.com/ekomh170/Tugas_Praktikum_Web_PW2/tree/master/praktikum_10)
+10. [Tugas 10: Praktikum 10 - Intergrasi Laravel Dengan AdminLTE & Admin - MVC & Membuat Halaman Pegawai Dengan MVC](https://github.com/ekomh170/Tugas_Praktikum_Web_PW2/tree/master/praktikum_10)
 
-11. [Tugas 11: Praktikum 11 - Intergrasi Laravel Dengan AdminLTE - Bikin versi periksa, dokter dan unit_kerja - Progression](#)
+11. [Tugas 11: Praktikum 11 - Membuat Fitur Periksa, Dokter & Unit Kerja ---- Kelurahan Juga Sudah Di Intergrasikan & Datatabase Juga Sudah Di Relasikan Sesuaikan Dengan Database Puskesmas Sebelumnya](#)
