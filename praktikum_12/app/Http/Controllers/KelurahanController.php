@@ -15,10 +15,8 @@ class KelurahanController extends Controller
         $title = "Daftar Kelurahan";
         $author = "Eko Muchamad Haryono"; 
         $sub = "Kelurahan";
-        // $kelurahans = Kelurahan::all();
         $kelurahans = Kelurahan::with('pasien')->get();
         return view('kelurahan.index', compact('kelurahans', 'title', 'author', 'sub'));
-        
     }
 
     /**
@@ -26,7 +24,10 @@ class KelurahanController extends Controller
      */
     public function create()
     {
-        //
+        $title = "Daftar Kelurahan";
+        $author = "Eko Muchamad Haryono"; 
+        $sub = "Kelurahan";
+        return view('kelurahan.create' , compact('title', 'author', 'sub'));
     }
 
     /**
@@ -34,7 +35,12 @@ class KelurahanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nama' => 'required',
+        ]);
+
+        Kelurahan::create($request->all());
+        return redirect()->route('kelurahan.index')->with('success', 'Kelurahan created successfully.');
     }
 
     /**
@@ -42,7 +48,10 @@ class KelurahanController extends Controller
      */
     public function show(Kelurahan $kelurahan)
     {
-        //
+        $title = "Daftar Kelurahan";
+        $author = "Eko Muchamad Haryono"; 
+        $sub = "Kelurahan";
+        return view('kelurahan.show', compact('kelurahan'));
     }
 
     /**
@@ -50,7 +59,10 @@ class KelurahanController extends Controller
      */
     public function edit(Kelurahan $kelurahan)
     {
-        //
+        $title = "Daftar Kelurahan";
+        $author = "Eko Muchamad Haryono"; 
+        $sub = "Kelurahan";
+        return view('kelurahan.edit', compact('kelurahan', 'title', 'author', 'sub'));
     }
 
     /**
@@ -58,7 +70,12 @@ class KelurahanController extends Controller
      */
     public function update(Request $request, Kelurahan $kelurahan)
     {
-        //
+        $request->validate([
+            'nama' => 'required',
+        ]);
+
+        $kelurahan->update($request->all());
+        return redirect()->route('kelurahan.index')->with('success', 'Kelurahan updated successfully.');
     }
 
     /**
@@ -66,6 +83,7 @@ class KelurahanController extends Controller
      */
     public function destroy(Kelurahan $kelurahan)
     {
-        //
+        $kelurahan->delete();
+        return redirect()->route('kelurahan.index')->with('success', 'Kelurahan deleted successfully.');
     }
 }

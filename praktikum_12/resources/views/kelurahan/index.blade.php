@@ -2,9 +2,7 @@
 @include('layouts.sidebar')
 
 <div class="container-fluid px-4">
-    <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
         <section class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
@@ -18,17 +16,13 @@
                         </ol>
                     </div>
                 </div>
-            </div><!-- /.container-fluid -->
+            </div>
         </section>
 
-        <!-- Main content -->
         <section class="content">
-
-            <!-- Default box -->
             <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">{{ $author }}</h3>
-
                     <div class="card-tools">
                         <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                             <i class="fas fa-minus"></i>
@@ -40,12 +34,14 @@
                 </div>
                 <div class="card-body">
                     <h1 class="my-4">Daftar Kelurahan</h1>
+                    <a href="{{ route('kelurahan.create') }}" class="btn btn-success mb-3">Tambah Data</a>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
                                 <th>ID</th>
                                 <th>Nama</th>
                                 <th>List Pasien</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -60,23 +56,26 @@
                                             @endforeach
                                         </ul>
                                     </td>
+                                    <td>
+                                        <a href="{{ route('kelurahan.show', $kelurahan->id) }}" class="btn btn-info">Read</a>
+                                        <a href="{{ route('kelurahan.edit', $kelurahan->id) }}" class="btn btn-primary">Edit</a>
+                                        <form action="{{ route('kelurahan.destroy', $kelurahan->id) }}" method="POST" style="display: inline;">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this item?')">Delete</button>
+                                        </form>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
                     </table>
                 </div>
-                <!-- /.card-body -->
                 <div class="card-footer">
                     Footer
                 </div>
-                <!-- /.card-footer-->
             </div>
-            <!-- /.card -->
-
         </section>
-        <!-- /.content -->
     </div>
-    <!-- /.content-wrapper -->
 </div>
 
 @include('layouts.footer')

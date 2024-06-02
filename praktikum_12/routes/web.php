@@ -59,4 +59,4 @@ Route::resource('/admin/periksa', PeriksaController::class);
 
 Route::resource('/admin/unit_kerja', UnitKerjaController::class);
 
-Route::get('/admin/kelurahan', [KelurahanController::class, 'index']);
+Route::resource('/admin/kelurahan', KelurahanController::class);
