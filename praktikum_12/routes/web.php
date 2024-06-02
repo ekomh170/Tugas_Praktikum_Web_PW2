@@ -53,7 +53,7 @@ Route::delete('/admin/pasien/{pasien}', [PasienController::class, 'destroy'])->n
 
 Route::get('/admin/pegawai', [PegawaiController::class, 'index']);
 
-Route::get('/admin/dokter', [DokterController::class, 'index']);
+Route::resource('/admin/dokter', DokterController::class);
 
 Route::resource('/admin/periksa', PeriksaController::class);
 

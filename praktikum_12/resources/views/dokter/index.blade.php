@@ -30,12 +30,7 @@
                     <h3 class="card-title">{{ $author }}</h3>
 
                     <div class="card-tools">
-                        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                            <i class="fas fa-minus"></i>
-                        </button>
-                        <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                            <i class="fas fa-times"></i>
-                        </button>
+                        <a href="{{ route('dokter.create') }}" class="btn btn-primary">Tambah Data</a>
                     </div>
                 </div>
                 <div class="card-body">
@@ -52,19 +47,30 @@
                                 <th>Telpon</th>
                                 <th>Alamat</th>
                                 <th>Unit Kerja</th>
+                                <th>Aksi</th>
+                            </tr>
                         </thead>
                         <tbody>
                             @foreach ($dokters as $dokter)
                                 <tr>
                                     <td>{{ $dokter->id }}</td>
                                     <td>{{ $dokter->nama }}</td>
-                                    <td>{{ $dokter->gender}}</td>
+                                    <td>{{ $dokter->gender }}</td>
                                     <td>{{ $dokter->tmp_lahir }}</td>
                                     <td>{{ $dokter->tgl_lahir }}</td>
                                     <td>{{ $dokter->kategori }}</td>
                                     <td>{{ $dokter->telpon }}</td>
                                     <td>{{ $dokter->alamat }}</td>
-                                    <td>{{ $dokter->unitkerja->nama }}</td>                                   
+                                    <td>{{ $dokter->unitkerja->nama }}</td>
+                                    <td>
+                                        <a href="{{ route('dokter.show', $dokter->id) }}" class="btn btn-info btn-sm">Read</a> 
+                                        <a href="{{ route('dokter.edit', $dokter->id) }}" class="btn btn-primary btn-sm">Edit</a>
+                                        <form action="{{ route('dokter.destroy', $dokter->id) }}" method="POST" style="display: inline-block;">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                        </form>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
