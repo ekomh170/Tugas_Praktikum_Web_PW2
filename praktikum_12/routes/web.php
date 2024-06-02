@@ -57,6 +57,6 @@ Route::resource('/admin/dokter', DokterController::class);
 
 Route::resource('/admin/periksa', PeriksaController::class);
 
-Route::get('/admin/unit_kerja', [UnitKerjaController::class, 'index']);
+Route::resource('/admin/unit_kerja', UnitKerjaController::class);
 
 Route::get('/admin/kelurahan', [KelurahanController::class, 'index']);

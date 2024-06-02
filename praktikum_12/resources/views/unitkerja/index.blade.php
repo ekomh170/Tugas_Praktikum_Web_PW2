@@ -40,12 +40,14 @@
                 </div>
                 <div class="card-body">
                     <h1 class="my-4">Daftar Unit Kerja</h1>
+                    <a href="{{ route('unit_kerja.create') }}" class="btn btn-primary mb-3">Tambah Unit Kerja</a>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
                                 <th>ID</th>
                                 <th>Nama</th>
                                 <th>List Unit Kerja</th>
+                                <th>Aksi</th> <!-- Add action column -->
                             </tr>
                         </thead>
                         <tbody>
@@ -59,6 +61,15 @@
                                                 <li>{{ $dokterperunitkerja->nama }}</li>
                                             @endforeach
                                         </ul>
+                                    </td>
+                                    <td>
+                                        <a href="{{ route('unit_kerja.show', $unitkerja->id) }}" class="btn btn-info">View</a>
+                                        <a href="{{ route('unit_kerja.edit', $unitkerja->id) }}" class="btn btn-warning">Edit</a>
+                                        <form action="{{ route('unit_kerja.destroy', $unitkerja->id) }}" method="POST" style="display:inline-block;">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this unit kerja?')">Delete</button>
+                                        </form>
                                     </td>
                                 </tr>
                             @endforeach
