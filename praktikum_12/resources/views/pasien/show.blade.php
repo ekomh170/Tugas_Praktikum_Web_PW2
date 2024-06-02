@@ -67,6 +67,12 @@
                         <label for="alamat">Alamat:</label>
                         <p>{{ $pasien->alamat }}</p>
                     </div>
+                    {{-- Pasien Relasi Dengan Tabel Kelurahan --}}
+                    <div class="form-group">
+                        <label for="kelurahan_id">Kelurahan:</label>
+                        <p>{{ $pasien->kelurahan->nama }}</p>
+                    </div>
+                    {{-- End Pasien Relasi Dengan Tabel Kelurahan --}}
                     <a href="{{ route('pasiens.index') }}" class="btn btn-primary">Back</a>
                 </div>
                 <!-- /.card-body -->
