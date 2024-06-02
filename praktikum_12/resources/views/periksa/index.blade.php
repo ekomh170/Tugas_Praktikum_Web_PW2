@@ -30,12 +30,7 @@
                     <h3 class="card-title">{{ $author }}</h3>
 
                     <div class="card-tools">
-                        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                            <i class="fas fa-minus"></i>
-                        </button>
-                        <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                            <i class="fas fa-times"></i>
-                        </button>
+                        <a href="{{ route('periksa.create') }}" class="btn btn-primary">Tambah Periksa</a>
                     </div>
                 </div>
                 <div class="card-body">
@@ -50,7 +45,9 @@
                                 <th>Tensi</th>
                                 <th>Keterangan</th>
                                 <th>Pasien</th>
-                                <th>Di Periksa Dokter</th>
+                                <th>Dokter</th>
+                                <th>Aksi</th>
+                            </tr>
                         </thead>
                         <tbody>
                             @foreach ($periksas as $periksa)
@@ -63,6 +60,15 @@
                                     <td>{{ $periksa->keterangan }}</td>
                                     <td>{{ $periksa->pasien->nama }}</td>
                                     <td>{{ $periksa->dokter->nama }}</td>
+                                    <td>
+                                        <a href="{{ route('periksa.show', $periksa->id) }}" class="btn btn-info btn-sm">Detail</a>
+                                        <a href="{{ route('periksa.edit', $periksa->id) }}" class="btn btn-primary btn-sm">Edit</a>
+                                        <form action="{{ route('periksa.destroy', $periksa->id) }}" method="POST" style="display: inline-block;">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus?')">Delete</button>
+                                        </form>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -81,5 +87,6 @@
     </div>
     <!-- /.content-wrapper -->
 </div>
+
 
 @include('layouts.footer')
