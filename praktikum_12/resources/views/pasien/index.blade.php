@@ -40,6 +40,7 @@
                 </div>
                 <div class="card-body">
                     <h1 class="my-4">Daftar {{ $sub }}</h1>
+                    <a href="{{ route('pasiens.create') }}" class="btn btn-primary mb-3">Tambah Pasien</a>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
@@ -52,6 +53,7 @@
                                 <th>Email</th>
                                 <th>Alamat</th>
                                 <th>Kelurahan</th>
+                                <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -66,6 +68,15 @@
                                     <td>{{ $pasien->email }}</td>
                                     <td>{{ $pasien->alamat }}</td>
                                     <td>{{ $pasien->kelurahan->nama }}</td>
+                                    <td>
+                                        <a href="{{ route('pasiens.show', $pasien->id) }}" class="btn btn-info btn-sm">Read</a>
+                                        <a href="{{ route('pasiens.edit', $pasien->id) }}" class="btn btn-warning btn-sm">Update</a>
+                                        <form action="{{ route('pasiens.destroy', $pasien->id) }}" method="POST" style="display: inline;">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this pasien?')">Delete</button>
+                                        </form>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>

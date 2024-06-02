@@ -22,8 +22,16 @@ class Pasien extends Model
         'kelurahan_id',
     ];  
 
+    // disable timestamps
+    public $timestamps = false;
+
     public function kelurahan()
     {
         return $this->belongsTo(Kelurahan::class);
+    }
+
+    public function periksas()
+    {
+        return $this->hasMany(Periksa::class);
     }
 }
