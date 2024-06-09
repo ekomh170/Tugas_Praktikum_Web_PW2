@@ -54,11 +54,32 @@ Route::delete('/admin/pasien/{pasien}', [PasienController::class, 'destroy'])->n
 
 Route::get('/admin/pegawai', [PegawaiController::class, 'index']);
 
-Route::resource('/admin/dokter', DokterController::class);
+// Route::resource('/admin/dokter', DokterController::class);
+Route::get('/admin/dokter', [DokterController::class, 'index'])->name('dokter.index');
+Route::get('/admin/dokter/create', [DokterController::class, 'create'])->name('dokter.create');
+Route::post('/admin/dokter/store', [DokterController::class, 'store'])->name('dokter.store');
+Route::get('/admin/dokter/{dokter}', [DokterController::class, 'show'])->name('dokter.show');
+Route::get('/admin/dokter/{dokter}/edit', [DokterController::class, 'edit'])->name('dokter.edit');
+Route::put('/admin/dokter/{dokter}', [DokterController::class, 'update'])->name('dokter.update');
+Route::delete('/admin/dokter/{dokter}', [DokterController::class, 'destroy'])->name('dokter.destroy');
 
-Route::resource('/admin/periksa', PeriksaController::class);
+// Route::resource('/admin/periksa', PeriksaController::class);
+Route::get('/admin/periksa', [PeriksaController::class, 'index'])->name('periksa.index');
+Route::get('/admin/periksa/create', [PeriksaController::class, 'create'])->name('periksa.create');
+Route::post('/admin/periksa/store', [PeriksaController::class, 'store'])->name('periksa.store');
+Route::get('/admin/periksa/{periksa}', [PeriksaController::class, 'show'])->name('periksa.show');
+Route::get('/admin/periksa/{periksa}/edit', [PeriksaController::class, 'edit'])->name('periksa.edit');
+Route::put('/admin/periksa/{periksa}', [PeriksaController::class, 'update'])->name('periksa.update');
+Route::delete('/admin/periksa/{periksa}', [PeriksaController::class, 'destroy'])->name('periksa.destroy');
 
-Route::resource('/admin/unit_kerja', UnitKerjaController::class);
+// Route::resource('/admin/unit_kerja', UnitKerjaController::class);
+Route::get('/admin/unit_kerja', [UnitKerjaController::class, 'index'])->name('unitkerjas.index');
+Route::get('/admin/unit_kerja/create', [UnitKerjaController::class, 'create'])->name('unitkerjas.create');
+Route::post('/admin/unit_kerja/store', [UnitKerjaController::class, 'store'])->name('unitkerjas.store');
+Route::get('/admin/unit_kerja/{unitkerja}', [UnitKerjaController::class, 'show'])->name('unitkerjas.show');
+Route::get('/admin/unit_kerja/{unitkerja}/edit', [UnitKerjaController::class, 'edit'])->name('unitkerjas.edit');
+Route::put('/admin/unit_kerja/{unitkerja}', [UnitKerjaController::class, 'update'])->name('unitkerjas.update');
+Route::delete('/admin/unit_kerja/{unitkerja}', [UnitKerjaController::class, 'destroy'])->name('unitkerjas.destroy');
 
 // Route::resource('/admin/kelurahan', KelurahanController::class);
 Route::get('/admin/kelurahan', [KelurahanController::class, 'index'])->name('kelurahans.index');
@@ -67,5 +88,4 @@ Route::post('/admin/kelurahan/store', [KelurahanController::class, 'store'])->na
 Route::get('/admin/kelurahan/{kelurahan}', [KelurahanController::class, 'show'])->name('kelurahans.show');
 Route::get('/admin/kelurahan/{kelurahan}/edit', [KelurahanController::class, 'edit'])->name('kelurahans.edit');
 Route::put('/admin/kelurahan/{kelurahan}', [KelurahanController::class, 'update'])->name('kelurahans.update');
-
 Route::delete('/admin/kelurahan/{kelurahan}', [KelurahanController::class, 'destroy'])->name('kelurahans.destroy');
