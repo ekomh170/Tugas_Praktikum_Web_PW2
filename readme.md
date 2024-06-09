@@ -47,5 +47,7 @@ Repository ini dibuat untuk menyimpan kumpulan tugas dan praktikum yang berkaita
 
 12. [Tugas 12: Praktikum 12 - Menambahkan CRUD Pada Menu Pasien & Menyesuaikan CRUD Dengan Relasi Antara Pasien & Periksa Agar Fungsi Crud Tetap Jalan - Untuk Menu Lainnya Opsional](https://github.com/ekomh170/Tugas_Praktikum_Web_PW2/tree/master/praktikum_12)
 
-13. [Tugas 13: Praktikum 13 - Persiapan Untuk Praktikum 13]()
+13. [Tugas 13: Praktikum 13 - Menambahkan CRUD Pada Menu Kelurahan & Menyesuaikan CRUD & Menyesuaikan Validasi Pasien & Periksa Agar, Delete Tetap Dapat Di Lakukan](https://github.com/ekomh170/Tugas_Praktikum_Web_PW2/tree/master/praktikum_13)
+
+14. [Tugas 14: Praktikum 14 - Persiapan Untuk Praktikum 14]()
 
