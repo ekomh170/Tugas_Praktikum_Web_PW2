@@ -41,6 +41,8 @@
                 <div class="card-body">
                     <h1 class="my-4">Daftar Pasien Untuk <b> {{ $sub }} {{ $kelurahan->nama }}</b></h1>
                     <a href="{{ route('pasiens.create') }}" class="btn btn-primary mb-3">Tambah Pasien</a>
+                    {{-- Tombol Back --}}
+                    <a href="{{ route('kelurahans.index') }}" class="btn btn-warning mb-3">Halaman Utama Kelurahan</a>
                     <table class="table table-bordered">
                         <thead>
                             <tr>

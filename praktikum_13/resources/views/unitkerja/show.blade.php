@@ -40,7 +40,9 @@
                 </div>
                 <div class="card-body">
                     <h1 class="my-4">Daftar Dokter Untuk <b> {{ $sub }} {{ $unitkerja->nama }}</b></h1>
-                    <a href="{{ route('pasiens.create') }}" class="btn btn-primary mb-3">Tambah Pasien</a>
+                    <a href="{{ route('dokter.create') }}" class="btn btn-primary mb-3">Tambah Pasien</a>
+                    {{-- Tombol Back --}}
+                    <a href="{{ route('unitkerjas.index') }}" class="btn btn-warning mb-3">Halaman Utama Unit Kerja</a>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
@@ -67,11 +69,11 @@
                                     <td>{{ $dokterUnitkerja->telpon }}</td>
                                     <td>{{ $dokterUnitkerja->alamat }}</td>
                                     <td>
-                                        <a href="{{ route('pasiens.show', $dokterUnitkerja->id) }}"
+                                        <a href="{{ route('dokter.show', $dokterUnitkerja->id) }}"
                                             class="btn btn-info btn-sm">Read</a>
-                                        <a href="{{ route('pasiens.edit', $dokterUnitkerja->id) }}"
+                                        <a href="{{ route('dokter.edit', $dokterUnitkerja->id) }}"
                                             class="btn btn-warning btn-sm">Update</a>
-                                        <form action="{{ route('pasiens.destroy', $dokterUnitkerja->id) }}"
+                                        <form action="{{ route('dokter.destroy', $dokterUnitkerja->id) }}"
                                             method="POST" style="display: inline;">
                                             @csrf
                                             @method('DELETE')
