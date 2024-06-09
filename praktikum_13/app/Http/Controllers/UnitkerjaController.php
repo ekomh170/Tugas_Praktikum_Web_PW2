@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Dokter;
 use App\Models\UnitKerja;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -46,7 +47,7 @@ class UnitKerjaController extends Controller
         UnitKerja::create($request->all());
 
         // Redirect to the index page with a success message
-        return redirect()->route('unitkerja.index')->with('success', 'Unit Kerja created successfully.');
+        return redirect()->route('unitkerjas.index')->with('success', 'Unit Kerja created successfully.');
     }
 
     /**
@@ -63,19 +64,18 @@ class UnitKerjaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(UnitKerja $unit_kerja)
+    public function edit(UnitKerja $unitkerja)
     {
         $title = "Edit Data Unit Kerja";
         $sub = "Unit Kerja";
         $author = "Eko Muchamad Haryono";
-        // dd($unitkerja);
-        return view('unitkerja.edit', compact('unit_kerja', 'title', 'author', 'sub'));
+        return view('unitkerja.edit', compact('unitkerja', 'title', 'author', 'sub'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, UnitKerja $unit_kerja)
+    public function update(Request $request, UnitKerja $unitkerja)
     {
         // Validate the incoming request data
         $request->validate([
@@ -83,10 +83,10 @@ class UnitKerjaController extends Controller
         ]);
 
         // Update the UnitKerja instance with the validated data
-        $unit_kerja->update($request->all());
+        $unitkerja->update($request->all());
 
         // Redirect to the index page with a success message
-        return redirect()->route('unit_kerja.index')->with('success', 'Unit Kerja updated successfully.');
+        return redirect()->route('unitkerjas.index')->with('success', 'Unit Kerja updated successfully.');
     }
 
     /**
@@ -95,26 +95,34 @@ class UnitKerjaController extends Controller
     public function destroy(UnitKerja $unitkerja)
     {
         try {
-            // Begin a database transaction
+            // Memulai transaksi database
             DB::beginTransaction();
     
-            // Delete all related records in the `dokters` table
-            $unitkerja->dokters()->delete(); // Menghapus semua dokter terkait
+            // Mengambil koleksi pasien yang memiliki kelurahan_id tertentu
+            $pasiens = Dokter::where('unitkerja_id', $unitkerja->id)->get();
     
-            // Delete the `unitkerja` instance
+            // Menghapus setiap pasien dalam koleksi
+            foreach ($pasiens as $pasien) {
+                // Menghapus semua record terkait di tabel `periksas`
+                $pasien->periksas()->delete();
+                // Menghapus instance Pasien
+                $pasien->delete();
+            }
+    
+            // Menghapus data Kelurahan
             $unitkerja->delete();
     
-            // Commit the transaction
+            // Menyimpan transaksi
             DB::commit();
     
-            // Redirect to the index page with a success message
-            return redirect()->route('unit_kerja.index')->with('success', 'Unit Kerja berhasil dihapus.');
+            // Redirect kembali ke halaman index dengan pesan sukses
+            return redirect()->route('unitkerjas.index')->with('success', 'Kelurahan berhasil dihapus.');
         } catch (\Exception $e) {
-            // Rollback the transaction if there is an error
+            // Membatalkan transaksi jika terjadi kesalahan
             DB::rollback();
     
-            // Redirect to the index page with an error message
-            return redirect()->route('unit_kerja.index')->with('error', 'Gagal menghapus Unit Kerja: ' . $e->getMessage());
+            // Redirect kembali ke halaman index dengan pesan error
+            return redirect()->route('unitkerjas.index')->with('error', 'Gagal menghapus Kelurahan: ' . $e->getMessage());
         }
     }
 }

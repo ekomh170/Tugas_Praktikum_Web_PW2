@@ -39,12 +39,12 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('unit_kerja.update', $unit_kerja->id) }}" method="POST">
+                    <form action="{{ route('unitkerjas.update', $unitkerja->id) }}" method="POST">
                         @csrf
                         @method('PUT')
                         <div class="form-group">
                             <label for="nama">Nama Unit Kerja:</label>
-                            <input type="text" class="form-control" id="nama" name="nama" value="{{ $unit_kerja->nama }}" required>
+                            <input type="text" class="form-control" id="nama" name="nama" value="{{ $unitkerja->nama }}" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>

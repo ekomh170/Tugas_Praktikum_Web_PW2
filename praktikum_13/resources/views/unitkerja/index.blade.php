@@ -40,7 +40,7 @@
                 </div>
                 <div class="card-body">
                     <h1 class="my-4">Daftar Unit Kerja</h1>
-                    <a href="{{ route('unit_kerja.create') }}" class="btn btn-primary mb-3">Tambah Unit Kerja</a>
+                    <a href="{{ route('unitkerjas.create') }}" class="btn btn-primary mb-3">Tambah Unit Kerja</a>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
@@ -63,9 +63,9 @@
                                         </ul>
                                     </td>
                                     <td>
-                                        <a href="{{ route('unit_kerja.show', $unitkerja->id) }}" class="btn btn-info">View</a>
-                                        <a href="{{ route('unit_kerja.edit', $unitkerja->id) }}" class="btn btn-warning">Edit</a>
-                                        <form action="{{ route('unit_kerja.destroy', $unitkerja->id) }}" method="POST" style="display:inline-block;">
+                                        <a href="{{ route('unitkerjas.show', $unitkerja->id) }}" class="btn btn-info">View</a>
+                                        <a href="{{ route('unitkerjas.edit', $unitkerja->id) }}" class="btn btn-warning">Edit</a>
+                                        <form action="{{ route('unitkerjas.destroy', $unitkerja->id) }}" method="POST" style="display:inline-block;">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this unit kerja?')">Delete</button>

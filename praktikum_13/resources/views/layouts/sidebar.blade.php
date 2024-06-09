@@ -53,37 +53,37 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ url('admin/pegawai') }}" class="nav-link @if(Request::is('admin/pegawai')) active @endif">
+                            <a href="{{ url('admin/pegawai') }}" class="nav-link @if(Request::is('admin/pegawai*')) active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Pegawai</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ url('admin/pasien') }}" class="nav-link @if(Request::is('admin/pasien')) active @endif">
+                            <a href="{{ url('admin/pasien') }}" class="nav-link @if(Request::is('admin/pasien*')) active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Pasien</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ url('admin/periksa') }}" class="nav-link @if(Request::is('admin/periksa')) active @endif">
+                            <a href="{{ url('admin/periksa') }}" class="nav-link @if(Request::is('admin/periksa*')) active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Periksa</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ url('admin/dokter') }}" class="nav-link @if(Request::is('admin/dokter')) active @endif">
+                            <a href="{{ url('admin/dokter') }}" class="nav-link @if(Request::is('admin/dokter*')) active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Dokter</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ url('admin/unit_kerja') }}" class="nav-link @if(Request::is('admin/unit_kerja')) active @endif">
+                            <a href="{{ url('admin/unit_kerja') }}" class="nav-link @if(Request::is('admin/unit_kerja*')) active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Unit Kerja</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ url('admin/kelurahan') }}" class="nav-link @if(Request::is('admin/kelurahan')) active @endif">
+                            <a href="{{ url('admin/kelurahan') }}" class="nav-link @if(Request::is('admin/kelurahan*')) active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Kelurahan</p>
                             </a>
@@ -101,19 +101,19 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ url('kabar') }}" class="nav-link @if(Request::is('kabar')) active @endif">
+                            <a href="{{ url('kabar') }}" class="nav-link @if(Request::is('kabar*')) active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Kabar</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ url('nilai') }}" class="nav-link @if(Request::is('nilai')) active @endif">
+                            <a href="{{ url('nilai') }}" class="nav-link @if(Request::is('nilai*')) active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Nilai</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ url('pasien') }}" class="nav-link @if(Request::is('pasien')) active @endif">
+                            <a href="{{ url('pasien') }}" class="nav-link @if(Request::is('pasien*')) active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Form Pasien</p>
                             </a>
