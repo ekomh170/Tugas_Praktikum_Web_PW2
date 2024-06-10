@@ -1,5 +1,5 @@
-@include('layouts.header')
-@include('layouts.sidebar')
+@include('admin.layouts.header')
+@include('admin.layouts.sidebar')
 
 <div class="container-fluid px-4">
     <div class="content-wrapper">
@@ -42,4 +42,4 @@
     </div>
 </div>
 
-@include('layouts.footer')
+@include('admin.layouts.footer')

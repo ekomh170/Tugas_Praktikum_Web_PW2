@@ -37,7 +37,7 @@ Route::middleware(['auth'])->group(function () {
         return view('pasien');
     });
 
-    Route::get('/admin', [AdminController::class, 'index']);
+    Route::get('/admin', [AdminController::class, 'index'])->name('dashboard');;
 
     Route::get('/admin/pasien', [PasienController::class, 'index'])->name('pasiens.index');
     Route::get('/admin/pasien/create', [PasienController::class, 'create'])->name('pasiens.create');
