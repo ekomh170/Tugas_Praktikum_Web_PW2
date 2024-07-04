@@ -49,5 +49,5 @@ Repository ini dibuat untuk menyimpan kumpulan tugas dan praktikum yang berkaita
 
 13. [Tugas 13: Praktikum 13 - Menambahkan CRUD Pada Menu Kelurahan & Menyesuaikan CRUD & Menyesuaikan Validasi Pasien & Periksa Agar, Delete Tetap Dapat Di Lakukan](https://github.com/ekomh170/Tugas_Praktikum_Web_PW2/tree/master/praktikum_13)
 
-14. [Tugas 14: Praktikum 14 - Persiapan Untuk Praktikum 14]()
+14. [Tugas 14: Praktikum 14 - Belajar Set-Up Auth Menggunakan Breeze & Inisiasi Menu Yang Sudah Di Buat](https://github.com/ekomh170/Tugas_Praktikum_Web_PW2/tree/master/praktikum_14_breeze)
 
