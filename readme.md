@@ -51,3 +51,4 @@ Repository ini dibuat untuk menyimpan kumpulan tugas dan praktikum yang berkaita
 
 14. [Tugas 14: Praktikum 14 - Belajar Set-Up Auth Menggunakan Breeze & Inisiasi Menu Yang Sudah Di Buat](https://github.com/ekomh170/Tugas_Praktikum_Web_PW2/tree/master/praktikum_14_breeze)
 
+15. [Tugas 15: Praktikum 15 - Laravel Otorisasi dan Hak Akses User]()
