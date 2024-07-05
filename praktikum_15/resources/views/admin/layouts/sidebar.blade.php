@@ -16,7 +16,8 @@
                     alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+                <a href="#" class="d-block">{{ strtoupper(Auth::user()->name) }}</a>
+                <span> {{ strtoupper(Auth::user()->role) }} </span>
             </div>
         </div>
 
@@ -133,19 +134,19 @@
                             </a>
                         </li>
                     </ul>
-                    
+
                     {{-- Logout Breeze --}}
-                    <li class="nav-item">
-                        <a href="{{ route('logout') }}" class="nav-link"
-                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            <i class="nav-icon fas fa-sign-out-alt"></i>
-                            <p>
-                                {{ __('Log Out') }}
-                            </p>
-                        </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
+                <li class="nav-item">
+                    <a href="{{ route('logout') }}" class="nav-link"
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        <i class="nav-icon fas fa-sign-out-alt"></i>
+                        <p>
+                            {{ __('Log Out') }}
+                        </p>
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
 
 
                 </li>

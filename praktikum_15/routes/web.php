@@ -1,7 +1,6 @@
 <?php
 
-// use App\Http\Controllers\ProfileController;
-
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PasienController;
 use App\Http\Controllers\PegawaiController;
@@ -17,8 +16,21 @@ Route::get('/', function () {
 });
 // Landing Page
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__ . '/auth.php';
+
+
 // Halaman Administrator -> Group Route Auth
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth', 'admin'])->group(function () {
 
     Route::get('/dashboard', [AdminController::class, 'index']);
 
@@ -36,9 +48,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/pasien', function () {
         return view('pasien');
     });
-
+ 
     Route::get('/admin', [AdminController::class, 'index'])->name('dashboard');;
-
     Route::get('/admin/pasien', [PasienController::class, 'index'])->name('pasiens.index');
     Route::get('/admin/pasien/create', [PasienController::class, 'create'])->name('pasiens.create');
     Route::post('/admin/pasien/store', [PasienController::class, 'store'])->name('pasiens.store');
@@ -88,18 +99,6 @@ Route::middleware(['auth'])->group(function () {
 // Halaman Administrator -> Group Route Auth
 
 
-// Default Route Dashboard======================
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
-// Default Route Dashboard ======================
 
-// Default Route Profile ======================
-// Route::middleware('auth')->group(function () {
-//     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-//     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-//     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-// });
-// Default Route Profile ======================
 
-require __DIR__ . '/auth.php';
+

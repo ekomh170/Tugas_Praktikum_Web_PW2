@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ $title }}</title>
+    <title>{{ $title ?? 'Default Title' }}</title>
 
     {{-- Favicon --}}
     <link rel="icon" href="{{ asset('assets/img/favicon/favicon.ico') }}" type="image/x-icon" />
