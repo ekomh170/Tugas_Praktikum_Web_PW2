@@ -4,7 +4,7 @@
     <a href="#" class="brand-link">
         <img src="{{ asset('assets/img/profile/profile.png') }}" alt="AdminLTE Logo"
             class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">Praktikum 14</span>
+        <span class="brand-text font-weight-light">Praktikum 15</span>
     </a>
 
     <!-- Sidebar -->
